@@ -3,10 +3,18 @@ import Modal from "./Modal"
 import Backdrop from "./Backdrop"
 
 function Todo(props) {
+    //UseState é uma funcao que sempre vai retornar dois elementos,
+    //  o Primeiro é uma variavel[um estado] e o Segundo é uma funcao.
+    //  A funcao desta funcao é permitir o controle de estado de determinados
+    //  componentes.
+
     const [modalIsOpen, setModalIsOpen] = useState(false)
 
     function deleteHandler() {
         setModalIsOpen(true)
+    }
+    function closeModalHandler() {
+        setModalIsOpen(false)
     }
     return (
         <div className="card">
@@ -16,8 +24,8 @@ function Todo(props) {
                     Delete
                 </button>
             </div>
-            {modalIsOpen && <Modal />}
-            {modalIsOpen && <Backdrop />}
+            {modalIsOpen && <Modal onCancel={closeModalHandler} />}
+            {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
         </div>
     )
 }
