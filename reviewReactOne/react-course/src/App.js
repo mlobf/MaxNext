@@ -1,15 +1,14 @@
+import Todo from "./components/Todo"
+
 function App() {
-  return (
-    <div>
-      <h1>MyTodos</h1>
-      <div className="card">
-        <h2>TITLE</h2>
-        <div className="actions">
-          <button className="btn">Delete</button>
+    return (
+        <div>
+            <h1>MyTodos</h1>
+            <Todo text="Master React" />
+            <Todo text="Learn React Js" />
+            <Todo text="Great React Course" />
         </div>
-      </div>
-    </div>
-  );
+    )
 }
 
-export default App;
+export default App
