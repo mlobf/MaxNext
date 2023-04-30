@@ -12,8 +12,19 @@ Custom, criado por nós.
     
 ====================================================================
 ====================================================================
-
+React e o uso de Forms
 ====================================================================
+Conceito de -event.preventDefault()-
+    Dentro do contexto - formularios em react, é necessario que seja 
+    impedido o auto carregamento dos dados de um formulario.
+    Para impedir isso o react por padrao apresenta o event que possui
+    a funcao preventDefault que impede o auto carregamento em tempo 
+    de execução.
+
+Conceito de refs.
+    Para armazenar e enviar o conteudo do formulario somente uma vez
+    temos que usar o refs que permite acessar diretamente os elementos
+    do React-DOM  
 
 
 
